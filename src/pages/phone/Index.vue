@@ -2,19 +2,23 @@
   <div class="p-6 bg-gray-100 h-full overflow-auto relative">
     <div v-if="!loading">
       <div class="flex">
-        <!-- **** Example Block **** -->
-        <div class="w-1/4 m-4 p-6 shadow text-base bg-white relative">
-          <h1>Example Block</h1>
-          <!-- <my-custom-component /> -->
+        <div class="w-1/4 m-35 p-6 shadow text-base bg-white relative">
+          <contact-card></contact-card>
         </div>
-        <!-- ******************** -->
+        <div class="w-1/4 m-10 p-6 shadow bg-white relative">
+          <h1>Hello</h1>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ContactCard from '../../components/ContactCard.vue';
+
 export default {
-  name: 'Phone',
+  components: {
+    'contact-card': ContactCard,
+  },
 };
 </script>
